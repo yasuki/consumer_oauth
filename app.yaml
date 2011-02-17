@@ -1,0 +1,14 @@
+application: cubeof2-maarui
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /oauth
+  script: consumer_oauth.py
+  login: required
+- url: /oauth/oauth_ready
+  script: consumer_oauth.py
+  login: required
+- url: /.*
+  script: consumer_oauth.py
